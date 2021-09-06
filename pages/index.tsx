@@ -12,6 +12,8 @@ type T = RedirectableProvider | "github";
 
 export default function Home() {
   const { data } = useSession();
+  const _typesafe = useSession({ required: false });
+
   return (
     <div className={styles.container}>
       <Head>
