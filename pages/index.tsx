@@ -18,12 +18,17 @@ const SiteHead = () => (
 );
 
 export default function Home() {
+  // Note: The `{required: false}` should be optional, will be fixed soon:
+  // https://github.com/nextauthjs/next-auth/issues/2674
   const { data } = useSession({ required: false });
+
   return (
     <div className={styles.container}>
       <SiteHead />
       {data && <div>User: {data.user?.name}</div>}
       {!data && (
+        // Note: This type override is nasty and will be fixed soon:
+        // https://github.com/nextauthjs/next-auth/issues/2673
         <button onClick={() => signIn("github" as RedirectableProvider)}>
           Sign In with Github
         </button>

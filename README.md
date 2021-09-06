@@ -19,3 +19,10 @@ Install and run
 npm i
 npm run dev
 ```
+
+## Notes
+
+If you decide to install the same packages you see here and replicate this on your own, look out for this bug when you intall the beta versions of next-auth v4:
+https://github.com/nextauthjs/next-auth/issues/2675
+
+It should be resolved very soon. Will try to update this when it is :)
