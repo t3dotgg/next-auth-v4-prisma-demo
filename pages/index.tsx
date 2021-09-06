@@ -11,7 +11,7 @@ import styles from "../styles/Home.module.css";
 type T = RedirectableProvider | "github";
 
 export default function Home() {
-  const { data } = useSession({ required: false });
+  const { data } = useSession();
   return (
     <div className={styles.container}>
       <Head>
