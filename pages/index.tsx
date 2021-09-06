@@ -3,12 +3,11 @@ import {
   getSession,
   RedirectableProvider,
   signIn,
+  signOut,
   useSession,
 } from "next-auth/react";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-
-type T = RedirectableProvider | "github";
 
 export default function Home() {
   const { data } = useSession({ required: false });
@@ -22,18 +21,11 @@ export default function Home() {
       <div>Aaaaaa</div>
       {data && <div>User: {data.user?.name}</div>}
       {!data && (
-        <>
-          <button onClick={() => signIn("github")}>Sign In with Github</button>
-          <button onClick={() => signIn<"github">("github")}>
-            Sign In with Github
-          </button>
-          <button
-            onClick={() => signIn<RedirectableProvider | "github">("github")}
-          >
-            Sign In with Github
-          </button>
-        </>
+        <button onClick={() => signIn("github" as RedirectableProvider)}>
+          Sign In with Github
+        </button>
       )}
+      {data && <button onClick={() => signOut()}>Sign Out</button>}
     </div>
   );
 }
