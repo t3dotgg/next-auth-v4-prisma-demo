@@ -17,6 +17,7 @@ Install and run
 
 ```bash
 npm i
+npx prisma migrate dev
 npm run dev
 ```
 
