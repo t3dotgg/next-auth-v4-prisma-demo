@@ -1,10 +1,20 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Note: We used `sqlite` to minimize configuration, but you can switch this to
+// any db that Prisma supports. In production, we recommend PostgreSQL
+//
+// Breakdown of DB options and features for Prisma.io:
+// https://www.prisma.io/docs/reference/database-reference/database-features
 datasource db {
   provider = "sqlite"
   url      = "file:./dev.db"
 }
 
+// Everything from here down is copy-pasted from the recommended schema from the
+// NextAuth docs
+//
+// Next-Auth Prisma adapter docs: https://next-auth.js.org/adapters/prisma
 generator client {
   provider        = "prisma-client-js"
   previewFeatures = ["referentialActions"]
