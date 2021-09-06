@@ -33,5 +33,5 @@ export default function Home() {
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const session = await getSession({ req: context.req });
 
-  return { props: { session, hideTopNav: !session } };
+  return { props: { session } };
 };
