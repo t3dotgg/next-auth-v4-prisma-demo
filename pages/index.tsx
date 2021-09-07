@@ -7,7 +7,6 @@ import {
   useSession,
 } from "next-auth/react";
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
 
 const SiteHead = () => (
   <Head>
@@ -23,7 +22,7 @@ export default function Home() {
   const { data } = useSession({ required: false });
 
   return (
-    <div className={styles.container}>
+    <div className={"container"}>
       <SiteHead />
       {data && <div>User: {data.user?.name}</div>}
       {!data && (
