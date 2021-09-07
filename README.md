@@ -15,6 +15,13 @@ We loaded up most of the files with comments describing what they do and how to 
 
 Install and run
 
+[`Create an OAuth app on Github`](https://github.com/settings/applications/new)
+
+Create a .env file in the root of your project, with your Github OAuth CLient ID and Secret:
+
+- GITHUB_CLIENT_ID
+- GITHUB_CLIENT_SECRET
+
 ```bash
 npm i
 npx prisma migrate dev
