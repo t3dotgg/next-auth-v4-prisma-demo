@@ -13,14 +13,25 @@ We loaded up most of the files with comments describing what they do and how to 
 
 ## Getting Started
 
-Install and run
+### Set up Github OAuth
+
+If you will be using a different auth provider, you can skip this section
 
 [`Create an OAuth app on Github`](https://github.com/settings/applications/new)
 
-Create a .env file in the root of your project, with your Github OAuth CLient ID and Secret:
+Make sure you have a [valid authorization callback url](https://next-auth.js.org/configuration/providers/oauth-provider#how-to) for `http://localhost:3000`.
+
+Your setup should look something like this
+![Screenshot of Github Oauth App setup](./docs/assets/setup-screenshot.png)
+
+Create a .env file in the root of your project, with your Github OAuth Client ID and Secret:
 
 - GITHUB_CLIENT_ID
 - GITHUB_CLIENT_SECRET
+
+### Run locally
+
+Install and run
 
 ```bash
 npm i
@@ -30,7 +41,7 @@ npm run dev
 
 ## Notes
 
-If you decide to install the same packages you see here and replicate this on your own, look out for this bug when you intall the beta versions of next-auth v4:
+If you would like to install the same packages here and replicate this on your own, look out for this bug when you intall the beta versions of next-auth v4:
 https://github.com/nextauthjs/next-auth/issues/2675
 
 It should be resolved very soon. Will try to update this when it is :)
