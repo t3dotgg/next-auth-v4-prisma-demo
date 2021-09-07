@@ -24,7 +24,7 @@ Make sure you have a [valid authorization callback url](https://next-auth.js.org
 Your setup should look something like this
 ![Screenshot of Github Oauth App setup](./docs/assets/setup-screenshot.png)
 
-Create a .env file in the root of your project, with your Github OAuth Client ID and Secret:
+Create a `.env` file in the root of your project, with your Github OAuth Client ID and Secret generated above:
 
 - GITHUB_CLIENT_ID
 - GITHUB_CLIENT_SECRET
